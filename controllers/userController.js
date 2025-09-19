@@ -68,6 +68,8 @@ const userController = {
     try {
       const { name, email, password, phone, address, city, role, image } = req.body;
 
+      console.log(req.body);
+
       // Check if user already exists
       const existingUser = await User.findOne({ email });
       if (existingUser) {
